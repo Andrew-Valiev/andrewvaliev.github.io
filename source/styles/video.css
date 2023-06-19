@@ -1,0 +1,105 @@
+/* видео*/
+
+/* блок видео */
+.video-block {
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+/* видео */
+.video-block video {
+    height: 65vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* текст блок */
+.video-text {
+    font-family: 'Lobster', sans-serif;
+    color: #fffbf8;
+    z-index: 2;
+    text-shadow: -1px -1px 0 #737373, 1px -1px 0 #737373, -1px 1px 0 #737373, 1px 1px 0 #737373;
+    font-style: italic;
+}
+
+/* текст */
+.phrase {
+    font-family: 'Lobster', sans-serif;
+    color: #737373;
+    text-shadow: -1px -1px 0 #fffbf8, 1px -1px 0 #fffbf8, -1px 1px 0 #fffbf8, 1px 1px 0 #fffbf8;
+}
+
+/* фильтр */
+.filter {
+    height: 65vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.045);
+    box-shadow: 0px 10px 10px 1px #000 inset, 
+    0px -10px 10px 1px #000 inset;
+}
+
+/* -------------------------------------------------------- */
+/* масштабирование надписи */
+@media (max-width: 2560px) {
+    .video-text {
+        margin-top: 13px;
+        margin-right: 320px; 
+    }
+}
+
+@media (max-width: 1440px) {
+    .video-text {
+        margin-top: 40px;
+        margin-right: 212px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .video-text {
+        margin-top: -4px;
+        margin-right: 114px;
+    }
+}
+
+@media (max-width: 425px) {
+    .video-text {
+        margin-top: -4px;
+        margin-right: 37px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 375px) {
+    .video-text {
+        margin-top: -4px;
+        margin-right: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .video-text {
+        margin-top: -4px;
+        margin-right: -16px;
+    }
+}
+
+
+
+
+
+
+
+
