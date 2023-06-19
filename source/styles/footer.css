@@ -1,0 +1,90 @@
+/* -------------------------------------------------------- */
+/* footer */
+
+/* главный блок футера; */
+.footer-block {
+    border: 10px inset #fffbf8;
+    background: url(../img/фон-3-3.png) center center/cover no-repeat;
+    margin-inline: 10px;
+    margin-bottom: 10px;
+    font-family: 'Lobster', sans-serif; 
+    letter-spacing: 1px;
+ }
+
+ /* блок контактов; */
+.contact {
+    display: flex;
+    justify-content: space-between;
+    color: #fffbf8;
+    max-width: 1180px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 10px;
+    font-size: 12px;
+}
+
+/* знак качества; */
+.gost {
+    display: flex;
+    align-items: end;
+    font-family: 'Lobster', sans-serif;
+}
+
+/* ссылки; */
+.contact a {
+    text-decoration: none;
+    color: #fffbf8;
+}
+
+.contact a:hover {
+    color: #737373;
+}
+
+/* -------------------------------------------------------- */
+/* масштабирование;*/
+
+@media (max-width: 1500px) {
+/* ширина блока second main; */
+    .contact {
+        max-width: 850px;
+    }
+}
+
+@media (max-width: 1125px) {
+/* ширина блока second main; */
+    .contact {
+        max-width: 670px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    /* ширина блока second main; */
+    .contact {
+        max-width: 670px;
+        flex-direction: column;
+    }
+
+/* first main block; */
+    .footer-block {
+        display: flex;
+    }
+
+/* знак качества;  */
+    .gost {
+        margin-bottom: 10px;
+    }
+
+/* отступы для среднего блока; */
+     .communication {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+/* ссылки в колонку; */
+    .links {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
