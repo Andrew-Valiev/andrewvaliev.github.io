@@ -4,7 +4,7 @@
 /* главный блок футера; */
 .footer-block {
     border: 10px inset #fffbf8;
-    background: url(../img/фон-3-3.png) center center/cover no-repeat;
+    background: url(../img/background-second.png) center center/cover no-repeat;
     margin-inline: 10px;
     margin-bottom: 10px;
     font-family: 'Lobster', sans-serif; 
