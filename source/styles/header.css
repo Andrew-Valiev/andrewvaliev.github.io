@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Azeret Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ body {
+    font-family: "Azeret Mono", monospace;
+    background: url(../img/background-main.png) ;
+    background-position: left;
+    background-attachment: fixed; 
+    background-size: 100% 100%;   
+} 
+
+/* -------------------------------------------------------- */
+/* навигационная панель */
+.navigation-block {
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 10px 1px #000; 
+    background: url(../img/background-second.png) center center/cover no-repeat;
+}
+
+/* расположение контента */
+.position {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1286px;
+    align-items: baseline;
+    width: 1286px;
+    margin-inline: 20px;
+}
+
+/* logo */
+.logo-text { 
+    display: block;
+    padding: 10px;
+    padding-left: 70px;
+    color: #fffbf8;
+    text-decoration: none;
+    font-family: 'Lobster', sans-serif;
+    font-size: 25px;
+    white-space: nowrap;
+    font-style: italic;
+}
+
+/* не отображать кнопку в широкоформатном экране */
+.nav-btn {
+    display: none;
+}
+
+/* расположить меню в ряд */
+.nav-list {
+    display: flex;
+}
+
+/* меню */
+.nav-list a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    padding-inline: 15px;
+    color: #737373;
+}
+
+/* изменение цвета при наведении меню */
+.nav-list a:hover {
+    color: #fffbf8;
+}
+
+/* изменение цвета при наведении logo */
+.logo-text:hover {
+    color: #737373;;
+}
+
+/* -------------------------------------------------------- */
+/* масштабирование */
+
+@media (max-width: 900px) {
+    .nav-list a {
+        color: #fffbf8;
+    }
+
+/* изменение цвета при наведении меню*/
+    .nav-list a:hover {
+        color:  #737373;
+    }
+}
+
+@media (max-width: 765px) {
+
+    .nav-list a {
+        color: #737373;
+    }
+    
+/* изменение цвета при наведении */
+    .nav-list a:hover {
+        color:  #fffbf8;
+    }
+
+/* расположение меню справа */
+    .position {
+        justify-content: space-between;
+    }
+
+/*  вытащить меню на 3 слой */
+    .drop-menu {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        z-index: 3;
+    }
+
+    .drop-menu:hover .nav-list {
+        display: block;
+        position: absolute;
+        right: 1px;
+        top: 57px;
+        border-radius: 2.2%;
+        background: url(../img/фон-3-3.png) center center/cover no-repeat;
+    }
+
+/* кнопка  */
+    .nav-btn {
+        font-size: 2em;
+        padding-inline: 10px;
+        padding-bottom: 10px;
+        border: none;
+        background-color: #b2000000;
+        color: #737373;
+        display: block;
+        cursor: pointer;
+        margin-bottom: 50px;
+        margin-inline: 20px;  
+        z-index: 3; 
+    }
+
+/* изменим цвет кнопки при наведении */
+    .nav-btn:hover {
+        color: #fffbf8;
+    }
+
+/* скрыть меню */
+    .nav-list {
+        display: none;
+    }
+
+/* рамка для всплывающего меню */
+    .nav-list a {
+    border-top: 0.5px outset #fffbf8;
+    border-radius: 10%;
+    }
+    
+    .logo-text {
+        padding-left: 20px;
+    }
+    
+}
+
