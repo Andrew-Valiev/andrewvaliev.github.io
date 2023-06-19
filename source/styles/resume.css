@@ -1,0 +1,257 @@
+/* cv */
+/* весь контейнер поддерживает перспективу; эффект переворота; */
+.flip-container {
+	perspective: 1000px; 
+}
+	/* переверните сторону при проведении мышью */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+/* установить максимальную ширину для общего контейнера 
+и для резюме-1 и резюме-2 */    
+.flip-container, .front, .back {
+    width: 799.54px;
+    height: 1049.54px;  
+}
+
+/* скорость перевертывания */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* скройте обратную сторону во время переворота */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* лицевая сторона размещена над обратной */
+.front {
+	z-index: 2;
+}
+
+/* обратная, изначально скрытая сторона */
+.back {
+	transform: rotateY(180deg);
+}
+
+.flipper img {
+    width: 782px;
+    height: 1032px;
+    border: 10px inset #fffbf8;
+} 
+
+/* общий блок; */
+.resume {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+
+    max-width: 1286px;
+    margin: 0 auto;
+    padding-bottom: 79px;
+    padding-inline: 10px;
+    padding-top: 79px;
+}
+
+/* фон для резюме; */
+.line-frame {
+    z-index: -1;
+    display: block;
+    position: absolute;
+    width: 800px;
+    height: 1115px;
+    border: 10px inset #fffbf8;
+    padding: 70px;
+    margin: 40px;
+    background: url(../img/background-second.png) center center/cover no-repeat;
+    top: -120px;
+    left: -120px;
+ }
+
+/* -------------------------------------------------------- */
+/* button */
+
+/* общий блок; */
+.button {
+    z-index: 1;
+    margin: 45px;
+    border: 3px solid #fffbf8;
+    border-radius: 3%;
+    cursor: pointer;
+}
+
+/* текст кнопки; */
+.btn-text {
+    font-size: 24px;
+    color: #fffbf8;
+    padding-inline: 60px;
+    font-family: 'Lobster', sans-serif;
+}
+
+/* кнопка; */
+.btn-resume {
+    background-color: rgba(192, 180, 133, 0);
+    cursor: pointer;
+    margin: 20px;
+    border-radius: 3%;
+}
+
+
+/* -------------------------------------------------------- */
+/* масштабирование;*/
+
+@media (max-width: 1024px) {
+/* ширина блока со всеми иконками; */
+    .flip-container, .front, .back {
+        width: 679.54px;
+        height: 892.54px;  
+    }
+    
+/* сделать максимальный размер фото; рамка; */
+    .flipper img {
+        width: 664px;
+        height: 877px;
+    } 
+
+/* фон для резюме; */
+    .line-frame {
+        width: 680px;
+        height: 948px;
+        
+        padding: 70px;
+        margin: 40px;
+      
+        top: -120px;
+        left: -120px;
+     }
+    }
+
+
+@media (max-width: 900px) {
+/* ширина блока со всеми иконками; */
+    .flip-container, .front, .back {
+        width: 543.54px;
+        height: 713.54px;  
+    }
+    
+/* сделать максимальный размер фото; рамка; */
+    .flipper img {
+        width: 531px;
+        height: 701px;
+    } 
+
+/* фон для резюме; */
+    .line-frame {
+        width: 544px;
+        height: 758px;
+        
+        padding: 60px;
+        margin: 40px;
+      
+        top: -110px;
+        left: -110px;
+     }
+
+/* кнопка */
+     .btn-resume {
+        margin: 7px;
+    }
+}
+
+
+@media (max-width: 750px) {
+/* ширина блока со всеми иконками; */
+    .flip-container, .front, .back {
+        width: 380.54px;
+        height: 499.54px;  
+    }
+    
+/* сделать максимальный размер фото; рамка; */
+    .flipper img {
+        width: 371px;
+        height: 490px;
+    } 
+
+/* фон для резюме; */
+    .line-frame {
+        width: 380px;
+        height: 530px;
+        
+        padding: 40px;
+        margin: 40px;
+      
+        top: -90px;
+        left: -85px;
+     }
+
+/* кнопка */
+     .btn-resume {
+        margin: 7px;
+    }
+
+/* текст кнопки; */
+    .btn-text {
+        font-size: 16px;
+        padding-inline: 40px;
+    }
+
+/* общий блок; */
+    .button {
+        margin: 15px;
+        margin-top: 25px;    
+    }
+}
+
+
+@media (max-width: 550px) {
+   /* ширина блока со всеми иконками; */
+    .flip-container, .front, .back {
+        width: 266.54px;
+        height: 349.54px;  
+    }
+    
+/* сделать максимальный размер фото; рамка; */
+    .flipper img {
+        width: 259px;
+        height: 343px;
+    } 
+
+/* фон для резюме; */
+    .line-frame {
+        width: 266px;
+        height: 371px;
+        
+        padding: 20px;
+       
+        top: -64px;
+        left: -64px;
+     }
+    
+    /* кнопка */
+         .btn-resume {
+            margin: 3px;
+        }
+    
+    /* текст кнопки; */
+        .btn-text {
+            font-size: 12px;
+            padding-inline: 40px;
+        }
+    
+    /* общий блок; */
+        .button {
+            margin: 0px;
+            margin-top: 15px;    
+        }
+    }
+
+
+
