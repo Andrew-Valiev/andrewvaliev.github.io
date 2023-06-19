@@ -1,5 +1,7 @@
 /* section */
 
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
 .main-about {
     display: flex;
     align-items: start; 

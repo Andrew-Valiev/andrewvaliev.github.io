@@ -1,0 +1,80 @@
+/* ЧТО ДАЛЬШЕ */
+
+.what-next-main {
+    max-width: 1286px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    padding-inline: 10px;
+    text-align: center;
+    color: #fffbf8;
+}
+
+.what-next-block {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.review-text {
+    font-size: 75px;
+    color: #F2CCB6;
+    opacity: .1;
+    font-family: Poppins, sans-serif; 
+}
+
+.header-cv {
+    position: absolute;
+    color: #737373;
+    font-size: 30px;
+    font-style: italic;
+    font-family: 'Lobster', sans-serif;
+}
+
+/* -------------------------------------------------------- */
+/* масштабирование иконок; текста */
+
+@media (max-width: 455px) {
+/* ширина блока со всеми иконками; */
+    .review-text {
+        font-size: 40px;
+    }
+    
+    .header-cv {
+      font-size: 24px;
+    }
+}
+
+@media (max-width: 355px) {
+    /* ширина блока со всеми иконками; */
+        .review-text {
+            font-size: 35px;
+        }
+        
+        .header-cv {
+          font-size: 20px;
+        }
+    }
+
+
+/* -------------------------------------------------------- */
+/* final */
+.text-cv {
+    max-width: 800px;
+    text-align: center;
+    color: #fffbf8
+}
+    
+.text-cv-block {
+    display: flex;
+    justify-content: center;
+}
+
+.final-block {
+    max-width: 1286px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    padding-inline: 10px;
+    text-align: center;
+}
